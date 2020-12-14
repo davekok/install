@@ -14,7 +14,7 @@ passwd
 apt-get purge -y docker docker-engine docker.io containerd runc || true
 apt-get update -y
 apt-get upgrade -y
-apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common
+apt-get install -y apt-transport-https ca-certificates gnupg-agent software-properties-common
 wget -O - -q https://download.docker.com/linux/debian/gpg | apt-key add -
 apt-key fingerprint 0EBFCD88
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
