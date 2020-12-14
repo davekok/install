@@ -11,7 +11,7 @@ fi
 echo "Please set password root:"
 passwd
 
-apt-get purge -y docker docker-engine docker.io containerd runc
+apt-get purge -y docker docker-engine docker.io containerd runc || true
 apt-get update -y
 apt-get upgrade -y
 apt-get install apt-transport-https ca-certificates gnupg-agent software-properties-common
